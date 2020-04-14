@@ -211,7 +211,7 @@ group::r-x
 other::r-x
 ```
 
-## Para alterar para AVA:
+Para alterar para `/opt/AVA`:
 
 ```sh
 
