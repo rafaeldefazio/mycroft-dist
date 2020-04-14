@@ -250,4 +250,12 @@ Também é necessário modificar em o arquivo `~/mycroft-core/scripts/prepare-ms
 
 ```mycroft_root_dir="/opt/mycroft"  # Also change in configuration``` para ```mycroft_root_dir="/opt/AVA"  # Also change in configuration``` 
 
+Assim que iniciar o Mycroft, as configurações serão aplicadas:
 
+```sh
+Initializing...
+Changing ownership of /opt/AVA to user: <usuario> with group: <usuario>
+alterado o dono de '/opt/AVA/skills' de root:root para <usuario>:<usuario>
+alterado o dono de '/opt/AVA' de root:root para <usuario>:<usuario>
+Starting background service bus
+```
