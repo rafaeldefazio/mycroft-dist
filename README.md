@@ -260,3 +260,11 @@ alterado o dono de '/opt/AVA/skills' de root:root para <usuario>:<usuario>
 alterado o dono de '/opt/AVA' de root:root para <usuario>:<usuario>
 Starting background service bus
 ```
+### Modificando ~/.mycroft
+
+Para modificar o diretório de usuário, em `mycroft.conf`:
+
+```sh  "skills": {
+    "directory": "~/.ava/skills"
+    }
+ ```
