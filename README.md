@@ -248,7 +248,8 @@ Atualizar configurçaão `"data_dir": "/opt/mycroft"` para `"data_dir": "/opt/AV
 
 Também é necessário modificar em o arquivo `~/mycroft-core/scripts/prepare-msm.sh` (linha 17):
 
-```mycroft_root_dir="/opt/mycroft"  # Also change in configuration``` para ```mycroft_root_dir="/opt/AVA"  # Also change in configuration``` 
+```mycroft_root_dir="/opt/mycroft"``` para 
+```mycroft_root_dir="/opt/AVA"``` 
 
 Assim que iniciar o Mycroft, as configurações serão aplicadas:
 
