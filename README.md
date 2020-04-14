@@ -173,3 +173,61 @@ optional arguments:
   -r, --raw
 
 ```
+
+---
+
+# Customização de pasta de skills
+
+No arquivo `dev_setup.sh`, linhas `258-272`, a criação das pastas de skills é feita, bem como a criação do link entre `~/mycroft-core/skills` e `/opt/mycroft//skills`:
+
+```sh
+
+echo 'The standard location for Mycroft skills is under /opt/mycroft/skills.'
+    if [[ ! -d /opt/mycroft/skills ]] ; then
+        echo 'This script will create that folder for you.  This requires sudo'
+        echo 'permission and might ask you for a password...'
+        setup_user=$USER
+        setup_group=$(id -gn $USER)
+        $SUDO mkdir -p /opt/mycroft/skills
+        $SUDO chown -R ${setup_user}:${setup_group} /opt/mycroft
+        echo 'Created!'
+    fi
+    if [[ ! -d skills ]] ; then
+        ln -s /opt/mycroft/skills skills
+        echo "For convenience, a soft link has been created called 'skills' which leads"
+        echo 'to /opt/mycroft/skills.'
+    fi
+```
+    
+O diretório `/opt/mycroft/` tem as seguintes permissões:
+
+```sh
+$ getfacl opt/mycroft/
+# file: opt/mycroft/
+# owner: <usuario>
+# group: <usuario>
+user::rwx
+group::r-x
+other::r-x
+```
+
+## Para alterar para AVA:
+
+```sh
+
+echo 'The standard location for Mycroft skills is under /opt/AVA/skills.'
+    if [[ ! -d /opt/AVA/skills ]] ; then
+        echo 'This script will create that folder for you.  This requires sudo'
+        echo 'permission and might ask you for a password...'
+        setup_user=$USER
+        setup_group=$(id -gn $USER)
+        $SUDO mkdir -p /opt/AVA/skills
+        $SUDO chown -R ${setup_user}:${setup_group} /opt/AVA
+        echo 'Created!'
+    fi
+    if [[ ! -d skills ]] ; then
+        ln -s /opt/AVA/skills skills
+        echo "For convenience, a soft link has been created called 'skills' which leads"
+        echo 'to /opt/AVA/skills.'
+    fi
+```
