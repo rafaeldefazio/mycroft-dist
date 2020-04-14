@@ -231,3 +231,17 @@ echo 'The standard location for Mycroft skills is under /opt/AVA/skills.'
         echo 'to /opt/AVA/skills.'
     fi
 ```
+
+Output:
+
+```sh
+
+The standard location for Mycroft skills is under /opt/AVA/skills.
+This script will create that folder for you.  This requires sudo
+permission and might ask you for a password...
+mkdir: não foi possível criar o diretório “/opt/AVA”: Permissão negada
+chown: não foi possível acessar '/opt/AVA': Arquivo ou diretório inexistente
+Created!
+For convenience, a soft link has been created called 'skills' which leads
+to /opt/AVA/skills.
+```
