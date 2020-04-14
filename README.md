@@ -240,3 +240,14 @@ This script will create that folder for you.  This requires sudo
 permission and might ask you for a password...
 Created!
 ```
+
+
+### Atualizando mycroft.conf
+
+Atualizar configurçaão `"data_dir": "/opt/mycroft"` para `"data_dir": "/opt/AVA"` em `mycroft.conf`.
+
+Também é necessário modificar em o arquivo `~/mycroft-core/scripts/prepare-msm.sh` (linha 17):
+
+```mycroft_root_dir="/opt/mycroft"  # Also change in configuration``` para ```mycroft_root_dir="/opt/AVA"  # Also change in configuration``` 
+
+
